@@ -1,0 +1,45 @@
+<section class="home margin-top">
+    <div class="container">
+        <h3 class="text-center">Book Details</h3>
+        <div class="back-btn">
+            <a [routerLink]="['/book']" class="btn btn-outline-primary theme-button">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i> Back to Book</a>
+        </div>
+        <div class="row pt-md-3">
+            <div class="col-lg-9 col-md-10 mx-auto">
+                <div class="accordion">
+                    <div class="subject-card mt-4">
+                        <div class="subject-card-header p-0">
+                            <div class="card__title p-lg-4">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <span class="course-number">
+                                            <span class="fa fa-book" aria-hidden="true"></span> Book Name :
+                                            {{currentBook.name | uppercase}}
+                                        </span>
+                                    </div>
+                                    <div class="col-md-5 subject-img">
+                                        <img src="assets/images/books.jpg" class="img-fluid img-curve" alt="">
+                                    </div>
+                                    <div class="col-md-7 subject-content mt-md-0 mt-4">
+                                        <p>Author : {{currentBook.authors}}</p>
+                                        <p>Released : {{currentBook.released | date}}</p>
+                                        <p>Number Of Pages : {{currentBook}}</p>
+                                        <p>ISBN No : {{currentBook.isbn}}</p>
+                                        <p>Publisher : {{currentBook.publisher}}</p>
+                                        <p>Country : {{currentBook.country}}</p>
+                                        <p>Media Type : {{currentBook.mediaType}}</p>
+
+                                        <!-- <span class="course-number"><span class="fa fa-book" aria-hidden="true"></span>
+                                            8 Courses</span> -->
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

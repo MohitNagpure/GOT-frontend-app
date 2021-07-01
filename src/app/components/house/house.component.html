@@ -1,0 +1,26 @@
+<section class="home margin-top">
+    <div class="container">
+        <h3 class="text-center">All House</h3>
+        <!-- {{allBooks | json}} -->
+        <div class="row">
+            <div class="item-container col-md-4" *ngFor="let house of allHouse let i=index">
+                <div class="item-content">
+                    <div class="item-grid">
+                        <!-- <span class="subject"> Date : {{books.released | date}}</span> -->
+                        <h5 class="card-title">House Name : {{house.name | uppercase}}</h5>
+                        <p>Coat Of Arms : {{house.coatOfArms}} </p>
+                        <ul class="admin-post">
+                            <li><i class="fa fa-map-marker" aria-hidden="true"></i> Region : {{house.region}}</li>
+                            <!-- <li>
+                                <span class="fa fa-user-o"></span>Author by : {{books.authors}}
+                            </li> -->
+                        </ul>
+                        <a class="view-btn mt-3" [routerLink]="['/view-house', i+1]">View House <span
+                                class="fa fa-long-arrow-right" aria-hidden="true"></span></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

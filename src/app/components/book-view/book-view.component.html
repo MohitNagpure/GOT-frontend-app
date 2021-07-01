@@ -1,0 +1,29 @@
+<section class="home margin-top">
+    <div class="container">
+        <h3 class="text-center">All Books</h3>
+        <!-- {{allBooks | json}} -->
+        <div class="row" *ngIf="allBooks">
+            <div class="item-container col-md-4" *ngFor="let books of allBooks; let i=index">
+                <div class="item-content">
+                    <div class="item-grid">
+                        <span class="subject"> Date : {{books.released | date}}</span>
+                        <h5 class="card-title">Book Name : {{books.name}}</h5>
+                        <ul class="admin-post">
+                            <li>
+                                <span class="fa fa-file-code-o"></span>Publisher : {{books.publisher}}
+                            </li>
+                            <li>
+                                <span class="fa fa-user-o"></span>Author by : {{books.authors}}
+                            </li>
+                        </ul>
+                        <a class="view-btn mt-3" [routerLink]="['/view-book',books.url.split('/')[5]]">view Deatils
+                            <span class="fa fa-long-arrow-right" aria-hidden="true"></span></a>
+                        <!-- <a class="view-btn mt-3" (click)="navigateToBookinfo(books.url)">view Deatils <span
+                                class="fa fa-long-arrow-right" aria-hidden="true"></span></a> -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

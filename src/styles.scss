@@ -1,1 +1,450 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap");
+body,
+* {
+    font-family: "Work Sans", sans-serif;
+}
+$primary-color: #dc8592;
+$secondary: #0d5fa8;
+$bg-banner-layer: linear-gradient(to right, rgb(22, 22, 37), rgba(0, 0, 0, 0.4));
+$title-color: #ffffff;
+$text-color: #c2c2bf;
+$light-bg-color: #161625;
+$border-radius: 6px;
+$border-color: rgba(53, 53, 82, 0.8);
+$card-box-shadow: 1px 5px 7.5px #161625;
+$card-hover-box-shadow: 0 0.5rem 1rem #020204;
+$transformY: translateY(-0.5rem);
+$bg-color: rgba(27, 26, 42, 0.96);
+$text-green: #ffffff;
+$text-blue: #ffffff;
+$text-pink: #ffffff;
+$bg-green: rgb(22, 22, 37);
+$bg-blue: rgb(22, 22, 37);
+$bg-pink: rgb(22, 22, 37);
+$breadcrumb-layer: linear-gradient(to right, rgb(22, 22, 37), rgba(0, 0, 0, 0.4));
+$breadcrumb-bg: rgba(27, 26, 42, 0.96);
+
+.wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.4s ease 0s;
+    display: grid;
+    align-items: center;
+    z-index: 111;
+    background-color: transparent;
+    padding: 10px 0;
+    border-bottom: none;
+    // background-color: $bg-color;
+    // box-shadow: $card-box-shadow;
+    .navbar-brand {
+        color: $primary-color;
+        margin: 0;
+        padding: 0;
+        font-size: 32px;
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+    .nav-item {
+        padding: 0 10px;
+        transition: all 0.5s ease;
+        position: relative;
+        .nav-link {
+            text-transform: capitalize;
+            transition: all 0.3s ease;
+            font-size: 16px;
+            font-weight: 400;
+            padding: 8px 12px;
+            line-height: 1;
+            color: $text-color;
+            border-radius: 3px;
+            &.active {
+                color: $primary-color;
+            }
+        }
+    }
+}
+p {
+    color: $text-color;
+    font-size: 16px;
+    line-height: 24.5px;
+    margin: 0;
+    padding: 0;
+}
+h3 {
+    font-size: 28px;
+    color: $title-color;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+.blue {
+    background: #0000ff;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    border-radius: 35px;
+    padding: 20px 0;
+}
+.red {
+    background: #dc4f72;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    border-radius: 35px;
+    padding: 20px 0;
+}
+.top-border {
+    border-top: 1px solid $border-color;
+    padding-top: 2rem;
+}
+.home {
+    background: $light-bg-color;
+    min-height: 90vh;
+    padding: 50px 0;
+    .item {
+        .item-card {
+            background-color: $bg-color;
+            border-radius: $border-radius;
+            box-shadow: $card-box-shadow;
+            transition: 0.3s ease-in-out;
+            border: 1px solid $border-color;
+            .course-number {
+                margin: 16px 0;
+                padding: 6px 0;
+                display: block;
+                border-top: 1px dotted #c5c5c5;
+                border-bottom: 1px dotted #c5c5c5;
+                color: $primary-color;
+            }
+        }
+    }
+    .head-title {
+        margin-bottom: 50px;
+        h3 {
+            color: $title-color;
+            font-size: 46px;
+            line-height: 1;
+        }
+        p {
+            color: $text-color;
+            font-size: 18px;
+            line-height: 26.5px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 750px;
+        }
+    }
+}
+.margin-top {
+    padding-top: 100px;
+}
+.footer {
+    background: $light-bg-color;
+    text-align: center;
+    padding: 30px 0;
+}
+.example {
+    background: $light-bg-color;
+    padding: 30px 0;
+    padding-top: 80px;
+    min-height: 60vh;
+    .stats_info {
+        background-color: $bg-color;
+        padding: 1.5rem;
+        border-radius: $border-radius;
+        box-shadow: $card-box-shadow;
+        transition: 0.3s ease;
+        border: 1px solid $border-color;
+        min-height: 220px;
+        .counter {
+            font-size: 45px;
+            line-height: 1;
+            color: $primary-color;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        h4 {
+            font-size: 16px;
+            line-height: 24.5px;
+            text-transform: capitalize;
+            color: $title-color;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        &:hover {
+            box-shadow: $card-hover-box-shadow;
+            transition: 0.3s ease;
+        }
+    }
+}
+
+.banner {
+    .content {
+        background-image: url("assets/images/got-banner.jpg");
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: cover;
+        display: grid;
+        align-items: center;
+        min-height: 500px;
+        padding-top: 90px;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: "";
+            background: $bg-banner-layer;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        h3 {
+            color: $title-color;
+            font-size: 46px;
+            line-height: 1;
+        }
+        p {
+            color: $text-color;
+            font-size: 16px;
+            line-height: 24.5px;
+            // max-width: 450px;
+        }
+    }
+}
+
+.back-btn {
+    float: right;
+}
+.btn-outline-primary {
+    border-color: $primary-color;
+    color: $primary-color;
+    &:hover,
+    &:focus,
+    &:active,
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled):active:focus {
+        color: #fff;
+        background-color: #742933;
+        border-color: #742933;
+        box-shadow: none;
+    }
+}
+
+.item-container {
+    .item-content {
+        box-shadow: $card-box-shadow;
+        transition: 0.3s ease-in-out;
+        margin-top: 30px;
+        .item-grid {
+            border: 1px solid $border-color;
+            padding: 1.5em;
+            background-color: $bg-color;
+            border-radius: 0 0 6px 6px;
+            padding-top: 3rem;
+            .subject {
+                background: $bg-green;
+                // color: $text-green);
+                font-size: 12px;
+                color: $title-color;
+                margin-bottom: 15px;
+                display: inline-block;
+                position: relative;
+                padding-left: 15px;
+                // background: rgba(0, 128, 0, 0.09);
+                padding: 5px 15px;
+                border-radius: 35px;
+            }
+
+            .card-title {
+                margin: 0;
+                padding: 0;
+                margin-bottom: 0.75rem;
+                font-size: 26px;
+                line-height: 31.2px;
+                margin-bottom: 10px;
+                color: $title-color;
+            }
+            .admin-post {
+                margin: 0;
+                padding: 0;
+                border-bottom: 1px solid $border-color;
+                margin-bottom: 10px;
+                padding-bottom: 20px;
+                padding-top: 20px;
+                li {
+                    list-style-type: none;
+                    color: #777;
+                    font-size: 14px;
+                    display: inline-block;
+                    margin-right: 10px;
+                    border-right: 1px solid #eee;
+                    padding-right: 10px;
+                    span {
+                        margin-right: 5px;
+                        color: $primary-color;
+                        display: inline-block;
+                    }
+                    &:last-child {
+                        border-right: none;
+                        padding-right: 0;
+                        margin-right: 0;
+                    }
+                }
+            }
+            .view-btn {
+                font-size: 16px;
+                color: $primary-color;
+                display: inline-block;
+                position: relative;
+                span {
+                    font-size: 16px;
+                    color: $primary-color;
+                    display: inline-block;
+                    position: relative;
+                }
+            }
+        }
+        &:hover {
+            box-shadow: $card-hover-box-shadow;
+            transition: 0.3s ease-in-out;
+            .view-btn {
+                span {
+                    right: -10px;
+                    transition: 0.3s ease-in-out;
+                }
+            }
+        }
+    }
+}
+
+// all charater style
+.team-row {
+    .team-info {
+        transition: 0.3s ease-in-out;
+        .img-circle {
+            width: 100%;
+            height: 250px;
+            display: inline-block;
+            overflow: hidden;
+            background: $bg-color;
+            img {
+                border-radius: 6px 6px 0 0;
+                width: 200px;
+                -o-object-fit: cover;
+                object-fit: cover;
+                -o-object-position: center;
+                object-position: center;
+            }
+        }
+        .column-btm {
+            padding: 16px;
+            background: $bg-color;
+            border-radius: 0 0 6px 6px;
+            border: 1px solid $border-color;
+            border-top: none;
+            margin-top: -6px;
+            position: relative;
+            h3 {
+                font-size: 22px;
+                line-height: 26px;
+                color: $title-color;
+                font-weight: 700;
+            }
+            p {
+                font-size: 16px;
+                line-height: 24px;
+                color: $text-color;
+                margin-top: 2px;
+            }
+        }
+        .social {
+            position: absolute;
+            top: -18px;
+            right: 5px;
+            a {
+                display: inline-block;
+                margin-right: 10px;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                line-height: 30px;
+                text-align: center;
+                span {
+                    color: #ffffff;
+                }
+                &.facebook {
+                    background: #3b5998;
+                }
+                &.twitter {
+                    background: #1da1f2;
+                }
+            }
+        }
+        .view-btn {
+            font-size: 16px;
+            color: $primary-color;
+            display: inline-block;
+            position: relative;
+            span {
+                font-size: 16px;
+                color: $primary-color;
+                display: inline-block;
+                position: relative;
+            }
+        }
+        &:hover {
+            box-shadow: $card-hover-box-shadow;
+            transform: $transformY;
+            transition: 0.3s ease-in-out;
+        }
+    }
+}
+
+.accordion {
+    .subject-card {
+        background-color: bg-color;
+        border-radius: $border-radius;
+        box-shadow: $card-box-shadow;
+        transition: 0.3s ease-in-out;
+        border: 1px solid $border-color;
+        .subject-img {
+            img {
+                border-radius: $border-radius;
+                max-width: 100%;
+                height: auto;
+            }
+            &.char-img{
+                text-align: center;
+                img{
+                    width: 100px;
+                }
+            }
+        }
+        .subject-content {
+            h3 {
+                font-size: 28px;
+                color: $title-color;
+                margin-bottom: 10px;
+            }
+            .course-number {
+                margin: 16px 0;
+                padding: 6px 0;
+                display: block;
+                border-top: 1px dotted #c5c5c5;
+                border-bottom: 1px dotted #c5c5c5;
+                color: $primary-color;
+            }
+        }
+        .course-number {
+            margin: 16px 0;
+            padding: 6px 0;
+            display: block;
+            border-top: 1px dotted #c5c5c5;
+            border-bottom: 1px dotted #c5c5c5;
+            color: $primary-color;
+            text-align: center;
+        }
+    }
+}

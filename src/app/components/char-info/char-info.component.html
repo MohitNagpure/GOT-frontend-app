@@ -1,0 +1,38 @@
+<section class="home margin-top">
+    <div class="container">
+        <h3 class="text-center">Character Details</h3>
+        <div class="back-btn">
+            <a [routerLink]="['/char']" class="btn btn-outline-primary theme-button">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i> Back to character</a>
+        </div>
+        <div class="row pt-md-3">
+            <div class="col-lg-9 col-md-10 mx-auto">
+                <div class="accordion">
+                    <div class="subject-card mt-4">
+                        <div class="subject-card-header p-0">
+                            <div class="card__title p-lg-4">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <span class="course-number">
+                                            <span class="fa fa-user-circle-o" aria-hidden="true"></span> Name :
+                                            {{currentCharacter.name | uppercase}}
+                                        </span>
+                                    </div>
+                                    <div class="col-md-5 subject-img char-img">
+                                        <img src="assets/images/user (1).png" class="img-fluid img-curve" alt="">
+                                    </div>
+                                    <div class="col-md-7 subject-content mt-md-0 mt-4">
+                                        <p>Gender : {{currentCharacter.gender}}</p>
+                                        <p>Culture : {{currentCharacter.culture}}</p>
+                                        <p>Aliases : {{currentCharacter.aliases}}</p>
+                                        <p>Played By : {{currentCharacter.playedBy}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

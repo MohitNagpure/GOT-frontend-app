@@ -1,0 +1,53 @@
+<section class="home margin-top">
+    <div class="container">
+        <h3 class="text-center">All Character</h3>
+        <!-- <div class="row">
+            <div class="item-container col-md-4" *ngFor="let character of allChar">
+                <div class="item-content">
+                    <div class="item-grid">
+                        <span class="subject"> Date :</span>
+                        <h5 class="card-title">Name : {{character.name | uppercase}}</h5>
+                        <p>aliases {{character.aliases}} </p>
+                        <ul class="admin-post">
+                            <li>
+                                <span class="fa fa-file-code-o"></span>Publisher : {{books.publisher}}
+                            </li>
+                            <li>
+                                <span class="fa fa-user-o"></span>Author by : {{books.authors}}
+                            </li>
+                        </ul>
+                        <a class="view-btn mt-3">view character <span class="fa fa-long-arrow-right"
+                                aria-hidden="true"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="row team-row pt-3 mt-5">
+            <div class="col-lg-3 col-sm-6 py-3 team-wrap" *ngFor="let character of allChar let i=index">
+                <div class="team-info">
+                    <div class="column position-relative img-circle">
+                        <div class="text-center">
+                            <img src="assets/images/user (1).png" alt="" class="img-fluid team-image">
+                        </div>
+                    </div>
+                    <div class="column-btm">
+                        <h3 class="name-pos">Name : {{character.name | uppercase}}</h3>
+                        <p>Aliases : {{character.aliases}}</p>
+                        <div class="social">
+                            <a class="facebook"><span class="fa fa-facebook" aria-hidden="true"></span></a>
+                            <a class="twitter"><span class="fa fa-twitter" aria-hidden="true"></span></a>
+                        </div>
+                        <div class="mt-3">
+                            <a class="view-btn" [routerLink]="['/characetr', i+1]">view <span aria-hidden="true"
+                                    class="fa fa-long-arrow-right"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</section>
